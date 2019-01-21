@@ -203,6 +203,6 @@ class TuanGou
         $sign = $server->buildSign($params,$this->config->app_secret);
         $params['sign'] = $sign;
 
-        return $server->sendRequest('GET', $uri,['form_params'=>$params]);
+        return $server->sendRequest('GET', $uri,['query'=>$params]);
     }
 }

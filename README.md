@@ -6,7 +6,7 @@
 ## Installing
 
 ```shell
-$ composer require fpy/tuangou -vvv
+$ composer require fpy/tuangou
 ```
 
 ## Usage

@@ -1,5 +1,5 @@
 <?php
-namespace Fpy\Exception;
+namespace Fpy\TuanGou\Exceptions;
 
 class Exceptions extends \Exception
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Fpy\Exception;
+namespace Fpy\TuanGou\Exceptions;
 
 
-class InvalidArgumentException extends Exceptions
+class InvalidArgumentException extends \Exception
 {
 
 }

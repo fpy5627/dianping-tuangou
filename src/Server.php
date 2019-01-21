@@ -2,7 +2,7 @@
 
 namespace Fpy\TuanGou;
 
-use Fpy\Exception\InvalidArgumentException;
+use Fpy\TuanGou\Exceptions\InvalidArgumentException;
 use GuzzleHttp\Client;
 
 class Server

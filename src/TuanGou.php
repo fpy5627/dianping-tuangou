@@ -29,12 +29,11 @@ class TuanGou
         $params['receipt_code'] = $receiptCode;
         $params['open_shop_uuid'] = $openShopUuid;
         $params = array_merge($params,$commonParams);
-
+        $params = array_filter($params);
         $server = new TGserver();
         $sign = $server->buildSign($params,$this->config->app_secret);
         $params['sign'] = $sign;
 
-        $params = array_filter($params);
         return $server->sendRequest('POST', $uri,['form_params'=>$params]);
     }
 
@@ -54,12 +53,11 @@ class TuanGou
         $params['qr_code'] = $receiptCode;
         $params['open_shop_uuid'] = $openShopUuid;
         $params = array_merge($params,$commonParams);
-
+        $params = array_filter($params);
         $server = new TGserver();
         $sign = $server->buildSign($params,$this->config->app_secret);
         $params['sign'] = $sign;
 
-        $params = array_filter($params);
         return $server->sendRequest('POST', $uri,['form_params'=>$params]);
     }
 
@@ -87,12 +85,11 @@ class TuanGou
         $params['app_shop_account'] = $shopAccount;
         $params['app_shop_accountname'] = $shopAccountName;
         $params = array_merge($params,$commonParams);
-
+        $params = array_filter($params);
         $server = new TGserver();
         $sign = $server->buildSign($params,$this->config->app_secret);
         $params['sign'] = $sign;
 
-        $params = array_filter($params);
         return $server->sendRequest('POST', $uri,['form_params'=>$params]);
     }
 
@@ -112,12 +109,11 @@ class TuanGou
         $params['receipt_code'] = $code;
         $params['open_shop_uuid'] = $openShopUuid;
         $params = array_merge($params,$commonParams);
-
+        $params = array_filter($params);
         $server = new TGserver();
         $sign = $server->buildSign($params,$this->config->app_secret);
         $params['sign'] = $sign;
 
-        $params = array_filter($params);
         return $server->sendRequest('POST', $uri,['form_params'=>$params]);
     }
 
@@ -126,13 +122,14 @@ class TuanGou
      * @Interface consumeHistory
      * @param $date
      * @param $openShopUuid
-     * @param null $type
+     * @param $session
+     * @param int $type
      * @param null $bizType
      * @param int $pageIndex
      * @param int $pageSize
-     * @return mixed|\Psr\Http\Message\ResponseInterface
+     * @return mixed
      * @author: fangpengyu
-     * @Time: 19-1-21 下午2:52
+     * @Time: 19-1-21 下午8:34
      */
     public function consumeHistory($date, $openShopUuid, $session, $type=0, $bizType=null, $pageIndex=1, $pageSize=10)
     {
@@ -145,12 +142,11 @@ class TuanGou
         $params['offset'] = $pageIndex;
         $params['limit'] = $pageSize;
         $params = array_merge($params,$commonParams);
-
+        $params = array_filter($params);
         $server = new TGserver();
         $sign = $server->buildSign($params,$this->config->app_secret);
         $params['sign'] = $sign;
 
-        $params = array_filter($params);
         return $server->sendRequest('POST', $uri,['form_params'=>$params]);
     }
 
@@ -176,12 +172,11 @@ class TuanGou
         $params['app_shop_account'] = $shopAccount;
         $params['app_shop_accountname'] = $shopAccountName;
         $params = array_merge($params,$commonParams);
-
+        $params = array_filter($params);
         $server = new TGserver();
         $sign = $server->buildSign($params,$this->config->app_secret);
         $params['sign'] = $sign;
 
-        $params = array_filter($params);
         return $server->sendRequest('POST', $uri,['form_params'=>$params]);
     }
 
@@ -203,12 +198,11 @@ class TuanGou
         $params['offset'] = $pageIndex;
         $params['limit'] = $pageSize;
         $params = array_merge($params,$commonParams);
-
+        $params = array_filter($params);
         $server = new TGserver();
         $sign = $server->buildSign($params,$this->config->app_secret);
         $params['sign'] = $sign;
 
-        $params = array_filter($params);
         return $server->sendRequest('GET', $uri,['form_params'=>$params]);
     }
 }

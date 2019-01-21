@@ -1,0 +1,21 @@
+{
+    "name": "fpy\/tuangou",
+    "description": "sdk of dianping\/tuangou",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "fpy5627",
+            "email": "t370@qq.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "phpunit/phpunit": "^7.5",
+        "mockery/mockery": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fpy\\Tuangou\\": "src"
+        }
+    }
+}

@@ -31,7 +31,7 @@ class TuanGou
         $params = array_merge($params,$commonParams);
 
         $server = new TGserver();
-        $sign = $server->buildSign($params,$this->config);
+        $sign = $server->buildSign($params,$this->config->app_secret);
         $params['sign'] = $sign;
 
         $params = array_filter($params);

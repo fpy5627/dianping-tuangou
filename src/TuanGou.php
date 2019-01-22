@@ -18,9 +18,10 @@ class TuanGou
      * @Interface prepare
      * @param $receiptCode
      * @param $openShopUuid
-     * @return mixed|\Psr\Http\Message\ResponseInterface
+     * @param $session
+     * @return mixed
      * @author: fangpengyu
-     * @Time: 19-1-21 下午1:55
+     * @Time: 19-1-22 上午10:27
      */
     public function prepare($receiptCode, $openShopUuid, $session)
     {
@@ -42,9 +43,10 @@ class TuanGou
      * @Interface scanPrepare
      * @param $receiptCode
      * @param $openShopUuid
-     * @return mixed|\Psr\Http\Message\ResponseInterface
+     * @param $session
+     * @return mixed
      * @author: fangpengyu
-     * @Time: 19-1-21 下午1:56
+     * @Time: 19-1-22 上午10:28
      */
     public function scanPrepare($receiptCode, $openShopUuid, $session)
     {
@@ -68,11 +70,12 @@ class TuanGou
      * @param $code
      * @param $count
      * @param $openShopUuid
+     * @param $session
      * @param $shopAccount
      * @param $shopAccountName
-     * @return mixed|\Psr\Http\Message\ResponseInterface
+     * @return mixed
      * @author: fangpengyu
-     * @Time: 19-1-21 下午2:17
+     * @Time: 19-1-22 上午10:28
      */
     public function consume($requestId, $code, $count, $openShopUuid, $session, $shopAccount, $shopAccountName)
     {
@@ -98,9 +101,10 @@ class TuanGou
      * @Interface getConsumed
      * @param $code
      * @param $openShopUuid
-     * @return mixed|\Psr\Http\Message\ResponseInterface
+     * @param $session
+     * @return mixed
      * @author: fangpengyu
-     * @Time: 19-1-21 下午2:48
+     * @Time: 19-1-22 上午10:28
      */
     public function getConsumed($code, $openShopUuid, $session)
     {
@@ -129,7 +133,7 @@ class TuanGou
      * @param int $pageSize
      * @return mixed
      * @author: fangpengyu
-     * @Time: 19-1-21 下午8:34
+     * @Time: 19-1-22 上午10:28
      */
     public function consumeHistory($date, $openShopUuid, $session, $type=0, $bizType=null, $pageIndex=1, $pageSize=10)
     {
@@ -156,11 +160,12 @@ class TuanGou
      * @param $appDealId
      * @param $code
      * @param $openShopUuid
+     * @param $session
      * @param $shopAccount
      * @param $shopAccountName
-     * @return mixed|\Psr\Http\Message\ResponseInterface
+     * @return mixed
      * @author: fangpengyu
-     * @Time: 19-1-21 下午3:04
+     * @Time: 19-1-22 上午10:28
      */
     public function reverseConsume($appDealId, $code, $openShopUuid, $session, $shopAccount, $shopAccountName)
     {
@@ -184,11 +189,12 @@ class TuanGou
      * 获取团购信息接口
      * @Interface queryShopDeal
      * @param $openShopUuid
+     * @param $session
      * @param int $pageIndex
      * @param int $pageSize
-     * @return mixed|\Psr\Http\Message\ResponseInterface
+     * @return mixed
      * @author: fangpengyu
-     * @Time: 19-1-21 下午3:05
+     * @Time: 19-1-22 上午10:28
      */
     public function queryShopDeal($openShopUuid, $session, $pageIndex=1, $pageSize=10)
     {

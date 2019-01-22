@@ -24,9 +24,10 @@ class Config
     /**
      * build common params for tuangou api
      * @Interface commonParams
+     * @param $session
      * @return mixed
      * @author: fangpengyu
-     * @Time: 19-1-21 下午3:26
+     * @Time: 19-1-22 上午10:27
      */
     public function commonParams($session)
     {

@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/fpy5627/dianping-tuangou.svg?branch=master)](https://travis-ci.org/fpy5627/dianping-tuangou)
 
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ffpy5627%2Fdianping-tuangou.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Ffpy5627%2Fdianping-tuangou?ref=badge_shield)
+
 <p align="center"> sdk of dianping/tuangou.</p>
 <p align="center"> 北极星开放平台,美团api接口SDK</p>
 

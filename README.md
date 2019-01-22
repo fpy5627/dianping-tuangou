@@ -42,6 +42,28 @@ $session->getScope($bid,$session);
 ```php
 use Fpy\TuanGou\TuanGou;
 $tuangou = new TuanGou($appKey, $appSecret);
+
+//输码验券校验接口
+$tuangou->prepare($receiptCode, $openShopUuid, $session);
+
+//扫码验券校验接口
+$tuangou->scanPrepare($receiptCode, $openShopUuid, $session);
+
+//验券接口
+$tuangou->consume($requestId, $code, $count, $openShopUuid, $session, $shopAccount, $shopAccountName);
+
+//查询已验券信息接口
+$tuangou->getConsumed($code, $openShopUuid, $session);
+
+//验券记录
+$tuangou->consumeHistory($date, $openShopUuid, $session, $type=0, $bizType=null, $pageIndex=1, $pageSize=10);
+
+//撤销验券接口(超过10分钟不能退券)
+$tuangou->reverseConsume($appDealId, $code, $openShopUuid, $session, $shopAccount, $shopAccountName)
+
+//获取团购信息接口
+
+$tuangou->queryShopDeal($openShopUuid, $session, $pageIndex=1, $pageSize=10);
 ```
 
 
